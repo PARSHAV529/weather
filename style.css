@@ -14,13 +14,19 @@
    
     
 }
+#hidden{
+    
+visibility: hidden;
+}
 
 .card{
   border-radius: 0.9rem;
     background: linear-gradient(135deg, #af49ba, #3d3477);
     box-shadow: 0 0 10px rgb(0, 0, 0,0.8);
 
-    height: 32rem;
+    /* height: 32rem; */
+    height: 5rem;
+
     width: 25rem;
     text-align: center;
     color: #ffffff;
@@ -62,6 +68,7 @@
 
 
 }
+
 .serach img{
     width: 24px;
     height: 25px;

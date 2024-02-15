@@ -3,9 +3,11 @@ const apiurl="https://api.openweathermap.org/data/2.5/weather?units=metric&q="
 let input = document.querySelector("#srchin")
 let searchbtn = document.querySelector("#srchbtn")
 let icon = document.querySelector("#icon")
+ 
 
 	searchbtn.addEventListener("click",()=>{
         getWeather(input.value)
+		
 	})
 
 
@@ -21,8 +23,12 @@ async function getWeather(cityname){
 		}, 500);
 		input.value=null
 		input.placeholder="Please enter valid city name"
+		document.getElementById("hidden").style.visibility="hidden"
+		document.querySelector(".card").style.height="5rem"
     }
 	else{
+		document.getElementById("hidden").style.visibility="visible"
+		document.querySelector(".card").style.height="32rem"
 
 		const data=await response.json()
 	
